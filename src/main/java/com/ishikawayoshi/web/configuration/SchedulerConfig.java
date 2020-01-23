@@ -1,7 +1,6 @@
 package com.ishikawayoshi.web.configuration;
 
 import com.ishikawayoshi.web.utils.SchedulerJobFactory;
-import org.quartz.SchedulerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.quartz.QuartzProperties;
 import org.springframework.context.ApplicationContext;
