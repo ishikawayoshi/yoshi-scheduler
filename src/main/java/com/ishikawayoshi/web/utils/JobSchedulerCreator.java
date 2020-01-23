@@ -10,11 +10,13 @@ import org.springframework.scheduling.quartz.CronTriggerFactoryBean;
 import org.springframework.scheduling.quartz.JobDetailFactoryBean;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 import org.springframework.scheduling.quartz.SimpleTriggerFactoryBean;
+import org.springframework.stereotype.Service;
 
 import java.text.ParseException;
 import java.util.Date;
 
 @Slf4j
+@Service
 public class JobSchedulerCreator {
 
     public JobDetail createJob(Class<? extends QuartzJobBean> jobClass, boolean isDurable, ApplicationContext context, String jobName, String jobGroup) {
