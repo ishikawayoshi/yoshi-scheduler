@@ -14,14 +14,17 @@ import java.util.Properties;
 @Configuration
 public class SchedulerConfig {
 
-    @Autowired
-    private DataSource dataSource;
+    private final DataSource dataSource;
 
-    @Autowired
-    private ApplicationContext applicationContext;
+    private final ApplicationContext applicationContext;
 
-    @Autowired
-    private QuartzProperties quartzProperties;
+    private final QuartzProperties quartzProperties;
+
+    public SchedulerConfig(DataSource dataSource, ApplicationContext applicationContext, QuartzProperties quartzProperties) {
+        this.dataSource = dataSource;
+        this.applicationContext = applicationContext;
+        this.quartzProperties = quartzProperties;
+    }
 
     @Bean
     public SchedulerFactoryBean schedulerFactoryBean() {
